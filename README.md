@@ -33,43 +33,43 @@ Dependent packages
 -----------
 Before compile the source codes, the following packages should be installed.
 
-* LibVisualSLAM (a computer vision library for visual SLAM) 
-* nvidia Cg toolkit (for GPU feature tracking) 
-* GLEW (for shader support) 
-* OpenGL,GLU,glut (for Visualization) 
-* BLAS, LAPACK (for linear algebra)
-* OpenCV (for Video I/O) 
-* wxWidgets (for GUI) 
+* 1.LibVisualSLAM (a computer vision library for visual SLAM) 
+* 2.nvidia Cg toolkit (for GPU feature tracking) 
+* 3.GLEW (for shader support) 
+* 4.OpenGL,GLU,glut (for Visualization) 
+* 5.BLAS, LAPACK (for linear algebra)
+* 6.OpenCV (for Video I/O) 
+* 7.wxWidgets (for GUI) 
 
 Here are the instructions for installing those packages.
 
-#### LibVisualSLAM
+#### 1. LibVisualSLAM
 This is a computer vision library developed for CoSLAM. Please click here.
 
-#### Nvidia Cg toolkit
+#### 2. Nvidia Cg toolkit
 Please click [here](https://developer.nvidia.com/cg-toolkit-download) to download the nvidia Cg toolkit. Click the .deb file to install the package.
 
-#### GLEW
+#### 3. GLEW
 Can be installed from the repository of Ubuntu or Linux Mint by typing 
 
     sudo apt-get install libglew-dev
     
-#### OpenGL, GLU, and GLUT
+#### 4. OpenGL, GLU, and GLUT
 OpenGL is supported by default after the nvidia graphics card driver being installed. To install GLU,GLUT, run 
 
     sudo apt-get install libglut1-mesa-dev
     sudo apt-get install freeglut3-dev
     
-#### BLAS and LAPACK
+#### 5. BLAS and LAPACK
 Just run
 
     sudo apt-get install libblas-dev
     sudo apt-get install liblapack-dev
       
-#### OpenCV
+#### 6. OpenCV
 Before installing OpenCV, you should install [ffmpeg](https://trac.ffmpeg.org/wiki/UbuntuCompilationGuide) to enable the advance Video I/O. Then download [OpenCV](http://opencv.org/downloads.html) and install it following the [installation instructions](http://docs.opencv.org/doc/tutorials/introduction/linux_install/linux_install.html#linux-installation). 
 
-#### wxWidgets
+#### 7. wxWidgets
 It important that only new versions > 2.81 are supported! The source codes can be download from [here](http://www.wxwidgets.org/downloads/). Go to the source code directory of wxWidgets and run
 
     ./configure --with-opengl
