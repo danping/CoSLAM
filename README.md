@@ -125,7 +125,52 @@ to run the system.
 
 Outputs
 -----------
-The outputs are saved in a directory named by a time string under '~/slam_results'. The outputs include three files:
+The outputs are saved in a directory named by a time string under '~/slam_results'. The outputs include 3D map points,
+camera poses, feature points and input video paths. Here is an example of the outputs of three cameras:
+
+    ~/slam_results/13-09-10=21-32/input_videos.txt      #paths of input video sequences
+    ~/slam_results/13-09-10=21-32/mappts.txt            #3D map points
+    ~/slam_results/13-09-10=21-32/0_campose.txt         #camera poses
+    ~/slam_results/13-09-10=21-32/1_campose.txt
+    ~/slam_results/13-09-10=21-32/2_campose.txt
+    ~/slam_results/13-09-10=21-32/0_featpts.txt         #feature points
+    ~/slam_results/13-09-10=21-32/1_featpts.txt
+    ~/slam_results/13-09-10=21-32/2_featpts.txt
+
+
+* input_video.txt
+        
+        <absolute path of video #1>
+        <intrinsic parameters>
+        <five distortion parameters>
+        <image resolution>
+        ......
+        <absolute path of video #2>
+        ......
+
+* mappts.txt
+        
+        <number of map points>
+        <random id #1>
+        <x y z>
+        <3x3 covariance>    
+        <random id #2>
+        ......
+
+* x_campose.txt
+
+        <number of frames>
+        <frame number>
+        <3x3 Rotation matrix> <3x1 translation vector>
+        ......
+
+* x_featpts.txt
+
+        <number of frames>
+        <frame number> <number of feature points>
+        <random id> <x y> <random id> <x y>, ....., 
+        <frame number> <number of feature points>
+        ......
 
 Contribute to CoSLAM
 -----------
