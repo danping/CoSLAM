@@ -33,7 +33,7 @@ Dependent packages
 -----------
 Before compile the source codes, the following packages should be installed.
 
-* 1.LibVisualSLAM (a computer vision library for visual SLAM) 
+* 1.[LibVisualSLAM](https://github.com/danping/LibVisualSLAM)(a computer vision library for visual SLAM) 
 * 2.nvidia Cg toolkit (for GPU feature tracking) 
 * 3.GLEW (for shader support) 
 * 4.OpenGL,GLU,glut (for Visualization) 
@@ -44,7 +44,7 @@ Before compile the source codes, the following packages should be installed.
 Here are the instructions for installing those packages.
 
 #### 1. LibVisualSLAM
-This is a computer vision library developed for CoSLAM. Please click here.
+This is a computer vision library developed for CoSLAM. Please click [here](https://github.com/danping/LibVisualSLAM).
 
 #### 2. Nvidia Cg toolkit
 Please click [here](https://developer.nvidia.com/cg-toolkit-download) to download the nvidia Cg toolkit. Click the .deb file to install the package.
@@ -61,7 +61,7 @@ OpenGL is supported by default after the nvidia graphics card driver being insta
     sudo apt-get install freeglut3-dev
     
 #### 5. BLAS and LAPACK
-Just run
+Run
 
     sudo apt-get install libblas-dev
     sudo apt-get install liblapack-dev
