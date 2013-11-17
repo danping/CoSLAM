@@ -57,7 +57,7 @@ Can be installed from the repository of Ubuntu or Linux Mint by typing
 #### 4. OpenGL, GLU, and GLUT
 OpenGL is supported by default after the nvidia graphics card driver being installed. To install GLU,GLUT, run 
 
-    sudo apt-get install libglut1-mesa-dev
+    sudo apt-get install libglu1-mesa-dev
     sudo apt-get install freeglut3-dev
     
 #### 5. BLAS and LAPACK
@@ -70,7 +70,7 @@ Run
 Before installing OpenCV, you should install [ffmpeg](https://trac.ffmpeg.org/wiki/UbuntuCompilationGuide) to enable the advance Video I/O. Then download [OpenCV](http://opencv.org/downloads.html) and install it following the [installation instructions](http://docs.opencv.org/doc/tutorials/introduction/linux_install/linux_install.html#linux-installation). 
 
 #### 7. wxWidgets
-It important that only new versions > 2.81 are supported! The source codes can be download from [here](http://www.wxwidgets.org/downloads/). Go to the source code directory of wxWidgets and run
+It important that only new versions > 2.9 are supported! The source codes can be download from [here](http://www.wxwidgets.org/downloads/). Go to the source code directory of wxWidgets and run
 
     ./configure --with-opengl
     make
