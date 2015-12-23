@@ -2,7 +2,7 @@ CoSLAM
 ======
 
 CoSLAM is a visual SLAM software that aims to use multiple freely moving cameras to simultaneously compute their egomotion and the 3D map of the surrounding scenes in a highly dynamic environment.
-For more details, please refer to [CoSLAM project page](http://www.ece.nus.edu.sg/stfpage/eletp/Projects/SLAM/).
+For more details, please refer to [CoSLAM project page](http://drone.sjtu.edu.cn/dpzou/project/coslam.php).
 
 
 How to cite
