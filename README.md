@@ -171,6 +171,12 @@ camera poses, feature points and input video paths. Here is an example of the ou
         <random id> <x y> <random id> <x y>, ....., 
         <frame number> <number of feature points>
         ......
+        
+
+Sample sequences for testing
+-----------
+Sample sequences can be downloaded for testing from:
+http://drone.sjtu.edu.cn/dpzou/dataset/CoSLAM
 
 Contribute to CoSLAM
 -----------
