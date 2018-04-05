@@ -170,8 +170,13 @@ void RobustBundleRTS::run() {
 void RobustBundleRTS::run(int nPtsCon, int nCamsCon, int maxIter,
 		int nInnerMaxIter) {
 	parseInputs(mapAndVecFeatPts);
-	bundleAdjustRobust(nCamsCon, Ks, Rs, Ts, nPtsCon, pt3Ds, meas2Ds, m_maxErr,
-			maxIter, nInnerMaxIter);
+    try{
+    bundleAdjustRobust(nCamsCon, Ks, Rs, Ts, nPtsCon, pt3Ds, meas2Ds, m_maxErr,
+            maxIter, nInnerMaxIter);
+    //}catch(std::exception& e){
+    }catch(...){
+        std::cerr << "bundle adjustment fail" << std::endl;
+    }
 }
 
 void RobustBundleRTS::constructCameraGraphs() {

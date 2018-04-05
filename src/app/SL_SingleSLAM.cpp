@@ -603,12 +603,17 @@ int SingleSLAM::poseUpdate3D(bool largeErr) {
 	std::vector<Track2DNode*> nodes;
 	int num = getStaticMappedTrackNodes(nodes);
 	if (num < 1) {
+        double* cR = m_camPos.current()->R;
+        double* cT = m_camPos.current()->t;
+        CamPoseItem* camPos = m_camPos.add(currentFrame(), camId,cR, cT);
+        updateCamParamForFeatPts(K, camPos);
+
 		warn(
 				"[camera id:%d]intra-camera pose update failed! less than five static map points (%d)",
 				camId, num);
-		leaveBACriticalSection();
-		CoSLAM::ptr->pause();
-		enterBACriticalSection();
+        //leaveBACriticalSection();
+        //CoSLAM::ptr->pause();
+        //enterBACriticalSection();
 		return -1;
 	}
 
