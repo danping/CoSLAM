@@ -49,10 +49,11 @@ This is a computer vision library developed for CoSLAM. Please click [here](http
 #### 2. Nvidia Cg toolkit
 Please click [here](https://developer.nvidia.com/cg-toolkit-download) to download the nvidia Cg toolkit. Click the .deb file to install the package.
 
-#### 3. GLEW
+#### 3. GLEW, xmu
 Can be installed from the repository of Ubuntu or Linux Mint by typing 
 
     sudo apt-get install libglew-dev
+    sudo apt-get install libxmu-dev
     
 #### 4. OpenGL, GLU, and GLUT
 OpenGL is supported by default after the nvidia graphics card driver being installed. To install GLU,GLUT, run 

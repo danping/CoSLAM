@@ -7,6 +7,8 @@
 
 #ifndef MYAPP_H_
 #define MYAPP_H_
+#undef Status
+#include <opencv2/opencv.hpp>
 
 #include "app/SL_CoSLAM.h"
 #include "app/SL_GlobParam.h"

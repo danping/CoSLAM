@@ -24,9 +24,12 @@
 #include "slam/SL_FeatureMatching.h"
 #include "SL_CoSLAMBA.h"
 #include "SL_GlobParam.h"
-
+#if CV_MAJOR_VERSION <= 2
 #if CV_MINOR_VERSION > 3
 #include <opencv2/nonfree/features2d.hpp>
+#endif
+#elif(CV_MAJOR_VERSION == 3)
+#include <opencv2/xfeatures2d.hpp>
 #endif
 
 //#define DEBUG_MODE
@@ -41,16 +44,23 @@ void InitMap::detectSurfFeats(int iCam) {
 	const ImgG* img = m_pImgGray[iCam];
 	KpVec& keyPts = m_cvSurfPts[iCam];
 	std::vector<float> desc;
+    
+    cv::Mat cvImg(img->rows, img->cols, CV_8UC1, img->data);
+#if CV_MAJOR_VERSION <= 2
 #if CV_MINOR_VERSION > 3
 	cv::SurfFeatureDetector surf(400, 4, 2, false);
-	cv::Mat cvImg(img->rows, img->cols, CV_8UC1, img->data);
 	surf(cvImg, cv::Mat(), keyPts, desc);
 	int dimDesc = surf.descriptorSize();
 #else
 	cv::SURF surf(400, 4, 2, false);
-	cv::Mat cvImg(img->rows, img->cols, CV_8UC1, img->data);
 	surf(cvImg, cv::Mat(), keyPts, desc);
 	int dimDesc = surf.descriptorSize();
+#endif
+#elif CV_MAJOR_VERSION == 3
+    using namespace cv::xfeatures2d;
+    cv::Ptr<SURF> surf = SURF::create(400, 4, 2, false);
+    surf->detectAndCompute(cvImg,cv::Mat(), keyPts, desc);
+    int dimDesc = surf->descriptorSize();    
 #endif
 	m_surfDesc[iCam].resize(keyPts.size(), dimDesc);
 

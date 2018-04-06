@@ -7,9 +7,9 @@
 
 #ifndef GLSCENEPANE_H_
 #define GLSCENEPANE_H_
+#include "app/SL_CoSLAM.h"
 #include "GL/glew.h"
 #include "GLTrackballPane.h"
-#include "app/SL_CoSLAM.h"
 
 using namespace std;
 class GLScenePane: public GLTrackballPane {

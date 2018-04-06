@@ -38,7 +38,7 @@ ELSE (WIN32)
 		DOC "GLEW library detected!")
 ENDIF (WIN32)
 
-message(status, "libraries:" ${GLEW_LIBRARY})
+#message(status, "libraries:" ${GLEW_LIBRARY})
 
 IF (GLEW_INCLUDE_PATH AND GLEW_LIBRARY)
     SET( GLEW_FOUND TRUE CACHE STRING "GLEW library has been detected!")

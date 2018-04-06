@@ -122,7 +122,7 @@ void CoSLAM::grabReadFrame() {
 
 	pthread_t threads[SLAM_MAX_NUM];
 	for (int i = 1; i < numCams; i++) {
-		pthread_create(&threads[i], 0, _parallelReadNextFrame, (void*) i);
+		pthread_create(&threads[i], 0, _parallelReadNextFrame, reinterpret_cast<void*>(i));
 	}
 	slam[0].grabReadFrame();
 	for (int i = 1; i < numCams; i++) {

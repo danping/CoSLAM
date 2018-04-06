@@ -7,12 +7,12 @@
 
 #ifndef GLIMAGEPANE_H_
 #define GLIMAGEPANE_H_
+#include "app/SL_CoSLAM.h"
 
 #include <GL/glew.h> // should be included before "wx/glcanvas.h"
 #include "wx/wx.h"
 #include "wx/glcanvas.h"
 
-#include "app/SL_CoSLAM.h"
 class GLImagePane: public wxGLCanvas {
 	wxGLContext* m_context;
 	unsigned char* imgData;
